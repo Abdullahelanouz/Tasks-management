@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     DashboardModule,
     ToastrModule.forRoot(),
+    NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
 
     BrowserAnimationsModule
   ],
