@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     HttpClientModule,
     AppRoutingModule,
     DashboardModule,
+    ToastrModule.forRoot(),
 
     BrowserAnimationsModule
   ],
