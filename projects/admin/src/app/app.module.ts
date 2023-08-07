@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     DashboardModule,
     ToastrModule.forRoot(),
     NgxSpinnerModule.forRoot({ type: 'square-jelly-box' }),
-
+    CoreModule,
     BrowserAnimationsModule
   ],
   providers: [],

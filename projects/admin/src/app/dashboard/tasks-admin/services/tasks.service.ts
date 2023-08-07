@@ -10,8 +10,7 @@ export class TasksService {
 
   getAllTasks(){
     let headers= new HttpHeaders()
-    headers= headers.append('Authorization' ,'Bearer '+ localStorage.getItem('token') )
-    return this.http.get('https://crud-ibk8.onrender.com/tasks/all-tasks',{headers})
+    return this.http.get('https://crud-ibk8.onrender.com/tasks/all-tasks')
   }
 }
 
