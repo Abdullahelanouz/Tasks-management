@@ -34,7 +34,8 @@ this.loginFrom=this.fb.group({
 }
 login() {
   this.spinner.show();
-  this.service.login(this.loginFrom.value).subscribe(res=>{
+  this.service.login(this.loginFrom.value).subscribe((res:any)=>{
+    localStorage.setItem("token",res.token)
  this.toaster.success("Success","login Sucess")
  this.router.navigate(['/tasks'])
  this.spinner.hide();
