@@ -42,7 +42,7 @@ export class ListTasksComponent implements OnInit {
     {name:"Complete" , id:1},
     {name:"In-Prossing" , id:2},
   ]
-  constructor(private  service:TasksService) { }
+  constructor(private  service:TasksService ,public dialog: MatDialog) { }
 
   ngOnInit(): void {
 this.getAllTasks();
@@ -58,5 +58,15 @@ this.getAllTasks();
     })
 
   }
+  addTask() {
+    const dialogRef = this.dialog.open(AddTaskComponent, {
+      width:'50%',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
 
 }
